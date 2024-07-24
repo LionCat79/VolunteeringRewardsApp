@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VolunPerks</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,38 +16,70 @@
             align-items: center;
             height: 100vh;
         }
-        .container {
-            width: 400px; /* Adjusted width */
-            background-color: #ffffff;
+        .container-custom {
+            background-color: #F4C762;
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             border-radius: 10px;
+        }
+        .notification {
+            background-color: #FFA500;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+        }
+        .card-custom, .qr-scanner .scanner {
+            background-color: #A0C080;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
             text-align: center;
         }
-        .container h1 {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-        .qr-button {
-            display: inline-block;
-            padding: 15px 30px;
-            background-color: #FF4500;
+        .icon {
+            background-color: #000000;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             color: #ffffff;
-            font-size: 18px;
-            border: none;
-            border-radius: 10px;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        .qr-button:hover {
-            background-color: #e03e00;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>VolunPerks</h1>
-        <a href="scanning-qr.html" class="qr-button">Scan QR Code</a>
+    <div class="container container-custom">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <img src="https://via.placeholder.com/30" alt="User"> <!-- Placeholder image adjusted -->
+            <h1 class="m-0" style="font-size: 28px;">VolunPerks</h1>
+            <div class="notification">
+                <img src="https://via.placeholder.com/30/FFA500/FFFFFF?text=!" alt="Notification"> <!-- Placeholder image adjusted -->
+            </div>
+        </div>
+        <div class="qr-scanner mb-4">
+            <div class="scanner card-custom">
+                <div class="content">
+                    <h2 class="m-0" style="font-size: 22px;">Scan QR Code</h2>
+                </div>
+                <div class="icon">&#9658;</div>
+            </div>
+        </div>
+        <div class="card card-custom">
+            <div class="content">
+                <h2 class="m-0" style="font-size: 22px;">Enter PIN</h2>
+            </div>
+            <div class="icon">&#9658;</div>
+        </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
